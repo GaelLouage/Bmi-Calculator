@@ -1,0 +1,53 @@
+﻿<Window x:Class="BMI_Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BMI_Calculator"
+        mc:Ignorable="d"
+        Title="BMI Calculator" Height="750" Width="400" ResizeMode="NoResize" Background="#111328">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="180"/>
+            <RowDefinition Height="180"/>
+            <RowDefinition Height="180"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <Label Content="BMI CALCULATOR" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" Foreground="White" FontSize="25" FontWeight="Bold"/>
+        <Image x:Name="imgMale" Source="Images/male.PNG" Grid.Row="1" Grid.Column="0" Cursor="Hand" MouseDown="imgMale_MouseDown"/>
+        <Image x:Name="imgFemale" Source="Images/female.PNG"  Grid.Row="1" Grid.Column="1" Cursor="Hand" MouseDown="imgFemale_MouseDown"/>
+        <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Background="#1D1E33" Margin="10 10 10 10">
+            <Label Content="HEIGHT" Foreground="#4C4F5D" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20"/>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Label x:Name="lblHeight" Content="0" FontSize="40" Foreground="White" />
+                <Label  Content="cm" Foreground="#4C4F5D" VerticalAlignment="Center" FontWeight="Bold" FontSize="20"/>
+            </StackPanel>
+            <Slider x:Name="sldrHeight" Margin="20 20 20 20" Cursor="Hand" ValueChanged="sldrHeight_ValueChanged" Maximum="220"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Margin="10 10 10 10"  Background="#1D1E33">
+            <Label Content="WEIGHT" Foreground="#4C4F5D" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20"/>
+            <Label x:Name="lblWeight" Content="0" Foreground="White"  FontSize="40" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Image x:Name="imgMinusWeight" Source="Images/minus.PNG"  Height="50" Margin="10 10 10 10" Cursor="Hand" MouseDown="imgMinusWeight_MouseDown"/>
+                <Image x:Name="imgAddWeight" Source="Images/plus.PNG" Height="50" Margin="10 10 10 10" Cursor="Hand" MouseDown="imgAddWeight_MouseDown"/>
+            </StackPanel>
+        
+        </StackPanel>
+        <StackPanel Grid.Row="3" Margin="10 10 10 10" Grid.Column="1"  Background="#1D1E33">
+            <Label Content="AGE" Foreground="#4C4F5D" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20"/>
+            <Label x:Name="lblAge" Content="0" Foreground="White"  FontSize="40" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Image x:Name="imgMinusAge" Source="Images/minus.PNG"  Height="50" Margin="10 10 10 10" Cursor="Hand" MouseDown="imgMinusAge_MouseDown"/>
+                <Image x:Name="imgAddAge" Source="Images/plus.PNG" Height="50" Margin="10 10 10 10" Cursor="Hand" MouseDown="imgAddAge_MouseDown"/>
+            </StackPanel>
+        </StackPanel>
+        <Label x:Name="lblBmi" Content="" Foreground="White" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="25"/>
+        <Button x:Name="btnCalulate" Grid.Column="0" Grid.Row="5" Background="#EC1455" Grid.ColumnSpan="2" Content="CALULATE" Foreground="White" FontSize="30" FontWeight="bold" Cursor="Hand" Click="btnCalulate_Click"/>
+    </Grid>
+</Window>
