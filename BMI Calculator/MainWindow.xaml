@@ -48,6 +48,6 @@
             </StackPanel>
         </StackPanel>
         <Label x:Name="lblBmi" Content="" Foreground="White" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="25"/>
-        <Button x:Name="btnCalulate" Grid.Column="0" Grid.Row="5" Background="#EC1455" Grid.ColumnSpan="2" Content="CALULATE" Foreground="White" FontSize="30" FontWeight="bold" Cursor="Hand" Click="btnCalulate_Click"/>
+        <Button x:Name="btnCalulate" Grid.Column="0" Grid.Row="5" Background="#EC1455" Grid.ColumnSpan="2" Content="CALCULATE" Foreground="White" FontSize="30" FontWeight="bold" Cursor="Hand" Click="btnCalulate_Click"/>
     </Grid>
 </Window>
